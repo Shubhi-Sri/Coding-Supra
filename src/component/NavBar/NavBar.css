@@ -47,3 +47,35 @@
   border-bottom: 2px solid #9dabba;
   padding-bottom: 3px;
 }
+
+@media (max-width: 768px) {
+  .Nav-Bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-right {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .Navigation {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .Navigation li a {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+  
+  .Navigation li a:hover {
+    border-bottom: none;
+    color: #9dabba;
+  }
+}
