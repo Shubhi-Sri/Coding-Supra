@@ -20,7 +20,7 @@ function About() {
                 >
                     <FaLinkedin />
                 </a>
-                <a href="shubhisrivastavaofficial11@gmail.com">
+                <a href="mailto:shubhisrivastavaofficial11@gmail.com" >
                     <FaEnvelope />
                 </a>
             </div>
