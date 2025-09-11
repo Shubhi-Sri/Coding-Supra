@@ -1,0 +1,47 @@
+.About{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000;
+    color: rgb(250, 250, 250);
+    height: 50vh;
+    font-family: poppins;
+}
+.social-icons {
+  margin-top: 25px;
+  width: 25%;
+}
+
+.social-icons a {
+  font-size: 40px;   /* 👈 Increase size of icons */
+  margin: 0 18px;
+  color: #fcfafa;       /* 👈 Default color (dark gray) */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Colors */
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons a:nth-child(1):hover {  /* GitHub */
+  color: #35d940;  
+}
+
+.social-icons a:nth-child(2):hover {  /* LinkedIn */
+  color: #0A66C2;  
+}
+
+.social-icons a:nth-child(3):hover {  /* Email */
+  color: #D44638;  
+}
+.Description{
+    width: 25%;
+}
+.List-item{
+    width: 25%;
+}
+.List-item ul li{
+    list-style: none;
+}

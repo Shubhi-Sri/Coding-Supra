@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+.main{
+    padding-top:80px;
+    font-family: poppins;
+    width: 80%;
+    
+    margin:0 auto;
+   
+
+}
+.upper{
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: auto;
+    
+}
+.upper-content{
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.825);
+    background-color: rgba(127, 180, 255, 0.296);
+}
+.upper img{
+    height: 300px;
+}
+.lower{
+    
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    padding: 20px;
+     
+}
+.lower-content{
+    padding:20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.825);
+    background-color: rgba(89, 107, 154, 0.723);
+   
+}
+.lower img{
+    height: 300px;
+}

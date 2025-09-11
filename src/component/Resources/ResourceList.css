@@ -1,0 +1,20 @@
+.resource-list {
+      max-width:96% ;
+      
+  margin: 30px auto;
+  font-family: poppins;
+  font-size: 20px;
+    font-family: poppins;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  
+}
+
+.Title_place {
+    margin-left: 28px;
+font-family: poppins;
+ font-weight: 700;
+  font-size: 40px;
+  color: rgb(41, 71, 140);
+}

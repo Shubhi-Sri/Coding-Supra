@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.Nav-Bar{
+    font-family: 'Poppins';
+    background-color:#06315d;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-size: 14px;    
+    padding: 15px 40px;
+  z-index: 1;
+
+}
+.Nav-Bar p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #becddc;          /* blue accent */
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  padding-right: 60px;
+}
+.Navigation{
+  display: flex;
+  
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+.Navigation li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.Navigation li a:hover {
+  color: #9dabba;
+  border-bottom: 2px solid #9dabba;
+  padding-bottom: 3px;
+}
