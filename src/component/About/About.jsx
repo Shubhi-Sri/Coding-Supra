@@ -20,9 +20,7 @@ function About() {
                 >
                     <FaLinkedin />
                 </a>
-                <a href="mailto:shubhisrivastavaofficial11@gmail.com" 
-                target="_blank"
-                    rel="noreferrer">
+                <a href="mailto:shubhisrivastavaofficial11@gmail.com" >
                     <FaEnvelope />
                 </a>
             </div>
