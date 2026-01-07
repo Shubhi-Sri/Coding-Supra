@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  react:
+    build:
+      context: .
+    container-name: coding-supra
+    ports:
+      - "8080:80"
+
