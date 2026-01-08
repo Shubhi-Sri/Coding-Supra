@@ -2,7 +2,6 @@ version: "3.9"
 services:
   react:
     image: shubhisrivastava/coding-supra:latest
-    container_name: coding-supra
     ports:
       - "8080:80"
 
