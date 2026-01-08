@@ -1,0 +1,44 @@
+pipeline{
+    agent {label "vinod"}
+    triggers {
+    githubPush()
+}
+    stages{
+        stage("code"){
+            steps{
+                echo "this is cloning the code"
+                git url: "https://github.com/Shubhi-Sri/Coding-Supra.git",
+                branch:"main"
+                echo "code clone successfull"
+            }
+        }
+        stage("build"){
+            steps{
+                echo "this is building the code"
+                sh "whoami"
+                sh "docker build -t coding-supra:latest ."
+            }
+        }
+        stage("test"){
+            steps{
+                echo "this is testing the code"
+            }
+        }
+        stage("push to docker hub"){
+            steps{
+                echo "this is pushing the image on docker hub"
+                withCredentials([usernamePassword('credentialsId': "docker-hub", passwordVariable:"dockerHubPass", usernameVariable:"dockerHubUser")]){
+                sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
+                sh "docker image tag coding-supra:latest shubhisrivastava/coding-supra:latest"
+                sh "docker push shubhisrivastava/coding-supra:latest"
+                }
+            }
+        }
+        stage("deploy"){
+            steps{
+                echo "this is deploying the code"
+                sh "docker-compose down && docker-compose up -d"
+            }
+        }
+    }
+}
