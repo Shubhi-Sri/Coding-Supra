@@ -1,0 +1,54 @@
+-
+  name: Deploy app on all servers
+  hosts: servers
+  become: yes
+
+  vars:
+    app_dir: /home/ubuntu/app
+    repo_url: https://github.com/Shubhi-Sri/Coding-Supra.git
+
+  tasks:
+
+    - name: ensure git is installed
+      apt:
+        name: git
+        state: present
+        update_cache: yes
+
+    - name: clone
+      git:
+        repo: "{{repo_url}}"
+        dest: "{{app_dir}}"
+        version: main
+        force: yes
+
+    - name: update apt cache
+      apt:
+        update-cache: yes
+
+    - name : install docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Install Docker Compose
+      apt:
+        name: docker-compose
+        state: present
+
+    - name: Ensure Docker service is running
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Stop existing containers
+      command: docker-compose down
+      args:
+        chdir: "{{ app_dir }}"
+      ignore_errors: yes
+
+    - name: Start containers
+      command: docker-compose up -d --build
+      args:
+        chdir: "{{ app_dir }}"
