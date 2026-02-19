@@ -4,3 +4,4 @@ adding another line to check cd
 adding to resolve cd pipeline docker installed in server
 nginx installed/
 nginx disabled
+change port mapping from 3000 to 80
